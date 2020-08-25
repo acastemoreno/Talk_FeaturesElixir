@@ -42,7 +42,6 @@
   - Con nombre
   - Inmutabilidad
   - Pureza
-- Anonymous and Named Funtion (Inmutabilidad, Multiple bodys and guard clauses)
 - Pipe Operator
 - Special Forms
   - case
