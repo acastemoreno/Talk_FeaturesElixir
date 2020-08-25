@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
    // Slide Settings
    settings: {
-     title: 'Features Elixir', 
-     subtitle: 'Features del lenguaje (No concurrente)', 
+     title: 'Introducción a principales features Elixir', 
+     subtitle: 'sin considerar programación concurrente y distribuida', 
      useBuilds: true, // Default: true. False will turn off slide animation builds. 
      usePrettify: true, // Default: true 
      enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.
