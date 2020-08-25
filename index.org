@@ -48,8 +48,6 @@
   - case
   - for
   - with
-- Protocols
-- Type Specification
 
 * Pattern Matching
   :PROPERTIES:
