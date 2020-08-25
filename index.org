@@ -1,0 +1,107 @@
+* Slide Options                           :noexport:
+# ======= Appear in cover-slide ====================
+#+TITLE: Introducción a principales features Elixir
+#+SUBTITLE: sin considerar programación concurrente y distribuida
+#+COMPANY: For Elixir Developers Mexico
+#+AUTHOR: Albert Castellano Moreno
+#+EMAIL: acastemoreno@gmail.com
+
+# ======= Appear in thank-you-slide ================
+#+GITHUB: http://github.com/acastemoreno
+
+# ======= Appear under each slide ==================
+#+FAVICON: images/elixir.png
+#+ICON: images/elixir.png
+#+HASHTAG: #ElixirLang #ElixirMX #ElixirWithLove
+
+# ======= Google Analytics =========================
+#+ANALYTICS: ----
+
+# ======= Org settings =========================
+#+EXCLUDE_TAGS: noexport
+#+OPTIONS: toc:nil num:nil ^:nil
+#+LANGUAGE: es
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="theme/css/custom.css" />
+
+* Me
+- Alumno de Codeable. 
+  - Bootcamp intensivo de 6 meses para aprender Ruby y JavaScript.
+- 5 años de experiencia con Elixir
+  - Side-Projects y trabajos freelancer.
+- Entusiasta sobre Elixir.
+
+* Objetivo de la charla
+- Revisar los principales features de Elixir Lang.
+- No se consideran features de programacion concurrente y distribuida.
+- Orientado a desarrolladores que empiezan con el lenguaje y que no tienen un background de programacion funcional.
+
+* Contenido
+- Pattern Matching
+- Anonymous and Named Funtion (Inmutabilidad, Multiple bodys and guard clauses)
+- Pipe Operator
+- Special Forms
+  - case
+  - for
+  - with
+- Polymorphic Funcions (Protocols)
+- Type Specification
+
+* Pattern Matching
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Pattern Matching
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 300px
+[[file:images/babe_pattern.gif]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota[fn:1]
+Nota[fn:2]
+#+END_QUOTE
+
+* patron = data
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Pattern Matching
+2 partes:
+- *Data*: Expresion evaluada contra la cual se hara una comparación.
+- *Patron*: Forma de data.
+  -Contiene variables.
+
+Elixir *tratara* de asignar valores a las variables para que la comparación sea verdadera.
+
+- La *asignación de variables* es una *posible consecuencia* de pattern matching. 
+
+** Ejemplos
+#+BEGIN_SRC elixir
+#Asignación?
+iex> nombre = "Albert"
+
+#Destructuring?
+iex> {nombre, _apellido} = {"Albert", "Castellano"}
+iex> {value, value} = {28, 27}
+iex> {^nombre, apellido} = {"Jose", "Valim"}
+
+iex> [a,_,_,_, %{value: a}] = [1, 2, 3, 4, %{value: 1}]
+iex> [a,_,_,_, %{value: a}] = [1, 2, 3, 4, %{value: 2}]
+#+END_SRC
+
+* Thank You ʕ•ᴥ•ʔ
+:PROPERTIES:
+:SLIDE: thank-you-slide segue
+:ASIDE: right
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+
+* Footnotes
+[fn:1] [[https://www.poetic oding.com/the-beauty-of-pattern-matching-in-elixir/][The beauty of Pattern Matching in elixir]]
+[fn2] [[https://blog.carbonfive.com/2017/10/19/pattern-matching-in-elixir-five-things-to-remember/][Pattern Matching in Elixir: Five Things To Remember]]
